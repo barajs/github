@@ -1,6 +1,6 @@
 {
   "name": "@barajs/github",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Bara Github integration module",
   "repository": {
     "type": "git",
