@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "start": "tsnd --debounce 3000 --respawn server.ts",
-    "compile": "yarn compile:webpack",
+    "compile": "yarn compile:tsc",
     "compile:tsc": "tsc -b",
     "compile:webpack": "webpack --mode=production",
     "format": "prettier --write '{.,src/**}/*.{js,jsx,ts,tsx}'",
