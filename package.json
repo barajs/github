@@ -1,6 +1,6 @@
 {
   "name": "@barajs/github",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Bara Github integration module",
   "repository": {
     "type": "git",
@@ -29,16 +29,16 @@
     "@octokit/webhooks": "6.3.2"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "3.0.4",
-    "@semantic-release/commit-analyzer": "6.3.0",
-    "@semantic-release/git": "7.0.16",
-    "@semantic-release/github": "5.5.4",
-    "@semantic-release/npm": "5.2.0",
+    "@semantic-release/changelog": "3.0.5",
+    "@semantic-release/commit-analyzer": "6.3.1",
+    "@semantic-release/git": "7.0.17",
+    "@semantic-release/github": "5.5.5",
+    "@semantic-release/npm": "5.3.2",
     "@types/lru-cache": "5.1.0",
     "@types/redux": "3.6.0",
     "prettier": "1.18.2",
-    "semantic-release": "15.13.27",
     "ts-loader": "6.2.1",
+    "semantic-release": "15.13.28",
     "ts-node-dev": "1.0.0-pre.43",
     "typescript": "3.6.4",
     "webpack": "4.41.2",
