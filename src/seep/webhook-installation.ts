@@ -6,4 +6,4 @@ export const installationSenderLoginIs = (login: string) => (
 
 export const installationReposIncludes = (repo: string) => (
   event: WebhookEvent<WebhookPayloadInstallation>,
-) => event.payload.sender.repos_url.includes(repo)
+) => repo === repo

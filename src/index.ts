@@ -1,5 +1,5 @@
 import http from 'http'
-import { portion, flow, popEvent } from '@barajs/core'
+import { portion, flow, popEvent, popSeep } from '@barajs/core'
 
 import WebhooksApi from '@octokit/webhooks'
 import { App } from '@octokit/app'
@@ -35,11 +35,46 @@ const Github = portion<any, GithubContext, GithubMold>({
   ...flows,
 })
 
-const { whenInitialized: whenWebhookListening, whenStateChanged } = popEvent(
-  Github,
+const {
+  whenInitialized: whenWebhookListening,
+  whenAnyHook,
+  whenInstallation,
+  whenPush,
+  whenPullRequest,
+  whenPullRequestReview,
+  whenPullRequestReviewComment,
+  whenBranchCreate,
+  whenBranchDelete,
+  whenIssueComment,
+  whenIssues,
+  whenLabel,
+  whenProject,
+  whenRepository,
+} = popEvent(Github)
+
+const { installationSenderLoginIs, installationReposIncludes } = popSeep(
+  whenInstallation,
 )
 
-export { Github, whenWebhookListening, whenStateChanged }
+export {
+  Github,
+  whenWebhookListening,
+  whenAnyHook,
+  whenInstallation,
+  whenPush,
+  whenPullRequest,
+  whenPullRequestReview,
+  whenPullRequestReviewComment,
+  whenBranchCreate,
+  whenBranchDelete,
+  whenIssueComment,
+  whenIssues,
+  whenLabel,
+  whenProject,
+  whenRepository,
+  installationSenderLoginIs,
+  installationReposIncludes,
+}
 export * from './types'
 // export * from './formula'
 export default Github
