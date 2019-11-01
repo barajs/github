@@ -12,4 +12,5 @@ export interface GithubMold {
 export interface GithubContext {
   webhook: WebhooksApi
   app: App
+  jwt: string
 }

@@ -20,15 +20,15 @@ const Github = portion<any, GithubContext, GithubMold>({
     if (enableWebhook) {
       webhook = new WebhooksApi({ secret })
     }
-    return { webhook, app }
+    const jwt = app.getSignedJsonWebToken()
+    return { webhook, app, jwt }
   },
   whenInitialized: flow<any, GithubContext, GithubMold>({
     bootstrap: ({ context, mold, next }) => {
-      const { app, webhook } = context
+      const { webhook } = context
       const { port } = mold
-      const jwt = app.getSignedJsonWebToken()
       http.createServer(webhook.middleware).listen(port, () => {
-        next({ port, jwt })
+        next({ port })
       })
     },
   }),
