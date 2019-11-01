@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/barajs/github/compare/v1.1.1...v1.1.2) (2019-11-01)
+
+
+### Bug Fixes
+
+* **deps:** upgrade @barajs/core alpha ([3010208](https://github.com/barajs/github/commit/3010208a0f863164890d818d39389958e3888422))
+
 ## [1.1.1](https://github.com/barajs/github/compare/v1.1.0...v1.1.1) (2019-10-31)
 
 
