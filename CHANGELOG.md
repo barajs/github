@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/barajs/github/compare/v1.1.0...v1.1.1) (2019-10-31)
+
+
+### Bug Fixes
+
+* **webpack:** webpack bundle seem error with navigator ([ee1b097](https://github.com/barajs/github/commit/ee1b0970a8ae4f0b414046fc6061408ae4b06daf))
+
 # [1.1.0](https://github.com/barajs/github/compare/v1.0.0...v1.1.0) (2019-10-31)
 
 
